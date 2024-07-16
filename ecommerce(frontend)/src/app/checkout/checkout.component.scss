@@ -1,0 +1,130 @@
+/* Fullscreen container */
+.fullscreen-container {
+  padding: 5%;
+  // height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: WhiteSmoke;
+}
+
+/* Mat stepper */
+mat-stepper {
+  width: 100%;
+  background-color: Gainsboro;
+  max-width: 1110px; /* Adjust width as needed */
+}
+
+/* Mat step labels */
+.mat-step-label {
+  font-weight: bold;
+}
+
+/* Mat card */
+mat-card {
+  margin-bottom: 20px;
+}
+
+/* Mat form fields */
+mat-form-field {
+  margin-right: 5%;
+  width: 20%;
+}
+
+/* Button container */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+/* Order summary columns */
+.orderSummery .order-summary-columns {
+  display: flex;
+}
+
+/* Order summary column */
+.orderSummery .order-summary-column {
+  flex: 1;
+  padding: 10px;
+}
+
+.example-card {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* Amount details */
+.amountDetails {
+  margin-top: 20px;
+  // margin-left: 760px;
+}
+
+/* Coupon form field */
+mat-form-field.coupon-field {
+  width: 74%;
+  //   margin-right: 20px;
+  //   margin-left: 70%;
+}
+
+/* Apply button */
+.apply-button {
+  margin-top: 20px;
+}
+
+/* Payment details */
+.payment-details {
+  margin-top: 20px;
+}
+
+/* Payment method form */
+.payment-method-form {
+  margin-top: 20px;
+}
+
+/* Payment method radio group */
+.payment-method-radio-group {
+  margin-top: 10px;
+}
+
+/* Payment method details */
+.payment-method-details {
+  margin-top: 10px;
+}
+
+strong {
+  margin-right: 200px;
+}
+
+/* Address details container */
+.address-details {
+  margin-top: 10px;
+}
+
+/* Address detail items */
+.address-details p {
+  margin-bottom: 5px;
+}
+
+/* Strong tags within address details */
+.address-details strong {
+  //margin-right: 20%;
+  font-weight: bold;
+}
+.address-title {
+  font-family: Noto Sans, sans-serif;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.discount-img {
+  
+  height: 310px;
+  background-size: cover;
+  width: 638px;
+  background-image: url("C:/Users/MohanrajS/Angular-demo/ecommerce/src/assets/discount1.png");
+  
+}
+.totalPrice {
+  margin-left: 30px;
+}

@@ -1,0 +1,102 @@
+<div class="marquee">
+  <marquee direction="left" behavior="scroll">
+    <span class="coupon"
+      >Use coupon code "DISCOUNT20" for 20% off on all watches - Limited time
+      offer!</span
+    >
+  </marquee>
+</div>
+
+<ngb-carousel>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper" routerLink="/watch">
+      <img
+       src="https://cdn.shopify.com/s/files/1/0261/8900/4880/files/titan-2.jpg?v=1688548422"
+        width="100%"
+        alt="Titan"
+      />
+    </div>
+    <div class="carousel-caption">
+      <h1>Titan</h1>
+      <p>Explore the elegance of time with our exquisite Titan watches.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper" routerLink="/watch">
+      <img
+        
+        src="https://www.justwatches.com/cdn/shop/files/TG_1920x667_Desktop-timex.jpg?v=1709201939&width=3840"
+        width="100%"
+        alt="Timex"
+      />
+    </div>
+    <div class="carousel-caption">
+      <h1>Timex</h1>
+      <p>Experience timeless style and precision with our Timex watches.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper" routerLink="/watch">
+      <img
+        src="https://www.casio.com/content/casio/locales/intl/en/products/watches/edifice/_jcr_content/root/responsivegrid/carousel_copy/item_1685411412442.casiocoreimg.jpeg/1711505487428/automotive-hero-pc.jpeg"
+        width="100%"
+        alt="Casio"
+      />
+    </div>
+    <div class="carousel-caption">
+      <h1>Casio</h1>
+      <p>
+        Elevate your everyday with our collection of innovative Casio watches.
+      </p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+<br />
+<div class="brands">
+  <h2>SHOP BY BRANDS</h2>
+  <div class="brands-grid-container">
+    <div class="brands-grid-item">
+      <mat-card class="example-card" routerLink="/watch">
+        <img
+          mat-card-image
+          src="https://logodix.com/logo/1293470.jpg"
+          alt="Titan"
+        />
+      </mat-card>
+    </div>
+    <div class="brands-grid-item">
+      <mat-card class="example-card">
+        <img
+          mat-card-image
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAclBMVEUBAQEAAAD////BwcHq6upPT0/29vbu7u75+fnU1NRSUlIfHx9zc3Ourq4TExPx8fEpKSmBgYHe3t7Nzc29vb3i4uJEREQ/Pz+zs7NtbW2VlZUZGRmenp5iYmIwMDDGxsY3NzeMjIx+fn6kpKReXl4kJCSp7yAAAAAEL0lEQVR4nO3Z6XajOBCGYQoTm8QL3pd468Tp+7/FQSphJMCOmTYnfWbe508MBsGHRCGcKAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/L/Jd1+I1DdrWNXQkDS2LcEnqX7VvNMfkHv8TZp2+2bNjcYrR66dy7MTHs+9G06u99b5FudNePKzfN1y4p+d3WrqbyWybWj1vBP37Yc58rZMZJvonddPjiiz+BYXSl7MwluYcGnW7fyEY90q6JJ+U7OzYmhEmVl8L4fKyiyPn92J/yqhO5mFd/01zWe41eBuQm04Xhd9ejFL8w5G6XX8LFNzhOV1OE3vJEztyf0q7ym9UOOwD03CtJ8Grgnz79/NPit764kczUJ6enpCvxr09RyrhaYh4TAOA4nM40qvFglnk2Hg98Tr+Fez01YTDrSDnx7QPyFNWFvfkPCoCbNJcBXiOKknHN2qpWaLaV/v51zPfFp2GbBVwuLm/XTlVitPbtiQ8N4hd/ZCTd0oT57/rAgP93jCsQvk6oJMUrfipVXCoqWFnNLq3h14PKHIoiiMulpLhvHRLqG4qjyzDb5324WPJ3SnNTPn39MqYZZfx5Xdm+/Dauub62Nk0W2+VgmnZkxt7AA7mbnZm/k0Gtlh6zc4sLfqxLOvTV/lwwXMfnccsE3Cdb6iv/+lIyvSOpjZ3kjFnwXY52H4NGyY4J414a7rLmyTcKR1b+HK39RscJG969Nyu4Y5TT2GvV75IO/4JoxaJTzoXbNzl/6g0STJ/xzbJnSP/XI2150WtXQZ6+RnoNc+0cD2VGfVhJfdyFftKTcdNcN587N9GDzo5va54DpvY7syfygUwcsGG+c0lYN+mb0P87iLSXc1yaMJRcyKL3E19bCwdUZ0prOoJ7x7zGFms9lq/PQXp9rRHk14MiuioohaB3Gz1aRNwryJnjauc5vd35LwqI+F/NNXkdC8aYl9fAzbJNTp6EHcJCLb/+C81E840wJjdkk0oJva9O3oLRv8NuHGDPNVebG6ndY8mlBfJNxLnXvJsM8ILabXXyW+f3tyk9I3bWobx+G89gcTzm0Q+3loX/BsL7iT3FYS7u782Hbx6otEdjysO+zFxxMm16JwvfK6dAlqviZcvYbmxW9pbsZwLU36Wp38DQlP3gxAv3TVxc7m+pWENUVLrv+P5eb2NXrbXUT9ean+TNJnlZfQzCPTvQtlhmzx24NOUDflKWd3ErqXTH9QT+wVuf/K/EcJo1WSDA71PnzL8vVews9BklzHonxmWdENss+/GYzKU57ny1XZixvf75lZDArPyKxabTrrxVu/qddLYPCKFNSOhu+aK43UmvX27y5h1Ph/kep6ifxliSL/cxRVtqw317xtua7ztygAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+A/4BxiBKnmRkAiHAAAAAElFTkSuQmCC"
+          alt="Timex"
+        />
+      </mat-card>
+    </div>
+    <div class="brands-grid-item">
+      <mat-card class="example-card">
+        <img
+          mat-card-image
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEUAAAD///8iIiLz8/O5ubkWFhZiYmL4+Pjf39/8/Pw5OTmxsbEFBQV1dXUmJibZ2dlWVlanp6c0NDSXl5dOTk7s7OwODg5qamrl5eXQ0NCzs7Orq6s+Pj5cXFwuLi6MjIxISEiBgYHLy8sbGxvBwcFwcHCfn5+FhYWUlJTYWuErAAADg0lEQVR4nO3Y23aiMBiGYVBE0LoBUUDEDVrr/V/hkB0Eysxac9AO0/U+R/YnsPiakBAcBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4OeYJOX2PHTgvC2v637xcC23i7evv6u/5c/dsOW+NwfKaO8Kcy+ddc5Iiqk8sC/8tni/5bLoVpcm+pvnhm5gTp5M67+WX5plWJ3QZhIentOmNq/s/rrsmwPTwhyIH+0lNqku1gndTkLXPX5Lpq7hhPGmU92nTfuLXfcOqnjPrOL0Dwn/WR9mGy0oZfGshlxwjIo8lBET3TyRPZgdo2XdJDMPaSGbP4rCqw9fzKVHlDC83dea6pSlTLUSY/C+lWk3d9V8J/44xuKAn5vOOokuzNL63Lf4+WguPaaEq15NZjqZP+Uz9pQ/5U1n/Wk0FeNg9+nSI04oI12bP9eBuFPRb85BHAoOvWu8i5F8cfrGlPC9U1rMmz5TriKx+i9E9a+wmHSvkchR6js9Y0q4S7a1RPfNre6SfWk3ypqJXg7IMF91V/ZKPrfRtXvpESXUa36gnzzRT3lnlX+KPlI/C70kRFtrrMZq8ayTx9ZZY0qoZDqhuLFHp9Gtrsz176NuHT6sYembBTHbtSN4vAkfnxKuRCL9+80PQtV+HrUtzpG5TrYwtTElzD0h0gv4cB+G1jlH3WWFNVInl1yN1al5hEeUsLdaiEet6qwIYp3f24XrTb7bdCfhSenJiLmehsabUM6lW7siFkSvd+JTvhb0inLdcPW540146r+inNr10CJfzvvFd7dd/MebUC5v83beP+TWNOQ0wzcaSri23hZGnDCVT1MTUT5dZt4sPbOhqKyEhbnC9v/oQ/n26eqdlNrcmo3SeuMGah0UT6tbqepHvXLIdXAtNyJ6qzWiHXA/oROr/eEmeu0qufhN9eQxU3GL1062mKv9UypuPqx2r6WcYXXsoYTTXO1DX98RTRtM6FztTXt9Y6ZB3K0Xal14dYrNNDyQ0PjO0Tqc0Jks23edcNPOOuul9f2m2X/4WdhUs6bxHxIWX5io7zcJ63n/qF+nq1vnLdyPVD+GXvvxxll/qNHsBrv28+NIEs4WtfvgoTgpUz9ZzPr187VM06T3aXS2SPy09xX1XF+67dGF5dPHVgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfrhfmswuqnwQGFgAAAAASUVORK5CYII="
+          alt="Fossil"
+        />
+      </mat-card>
+    </div>
+    <div class="brands-grid-item">
+      <mat-card class="example-card">
+        <img
+          mat-card-image
+          src="data:image/png;base64,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"
+          alt="casio"
+        />
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container" routerLink="/watch">
+  <div class="grid-item" *ngFor="let item of gridItems">
+    <img [src]="item.imageUrl" alt="{{ item.altText }}" />
+    <!-- <div class="overlay">{{ item.overlayText }}</div> -->
+  </div>
+</div>

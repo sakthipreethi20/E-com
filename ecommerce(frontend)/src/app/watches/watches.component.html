@@ -1,0 +1,105 @@
+<img
+  src="https://www.titan.co.in/on/demandware.static/-/Library-Sites-TitanSharedLibrary/default/dw09b88e12/images/Category%20Banners/bestseller%201920x200.jpg"
+  width="100%"
+/>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" opened>
+    <h2>Filters</h2>
+
+    <div class="filter-group">
+      <h3>Brands</h3>
+      <mat-checkbox
+        *ngFor="let brand of brands"
+        [(ngModel)]="brand.checked"
+        (click)="applyFilters()"
+      >
+        {{ brand.name }}
+      </mat-checkbox>
+    </div>
+
+    <div class="filter-group">
+      <h3>Strap Material</h3>
+      <mat-checkbox
+        *ngFor="let feature of features"
+        [(ngModel)]="feature.checked"
+        (click)="applyFilters()"
+      >
+        {{ feature.name }}
+      </mat-checkbox>
+    </div>
+
+    <div class="filter-group">
+      <h3>Price Range</h3>
+      <mat-checkbox
+        *ngFor="let price of priceRanges"
+        [(ngModel)]="price.checked"
+        (click)="applyFilters()"
+      >
+        {{ price.name }}
+      </mat-checkbox>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <!-- Display filtered watches -->
+    <div *ngIf="filteredWatches.length > 0; else noWatches">
+      <div
+        class="container"
+        fxLayout="row wrap"
+        fxLayoutAlign="start center"
+        fxLayoutGap="10px"
+      >
+        <div
+          class="card"
+          fxFlex="calc(33.33% - 20px)"
+          *ngFor="let watch of filteredWatches"
+        >
+          <mat-card class="watch-card">
+            <div>
+              <mat-card-header>
+                <img
+                  [src]="watch.imageUrl"
+                  alt="Watch Image"
+                  width="300px"
+                  height="100px"
+                />
+                <button
+                  mat-icon-button
+                  class="wishlist-icon"
+                  [class.wishlist-added]="InWishlist(watch.id)"
+                  (click)="Wishlist(watch)"
+                  matTooltip="Add to Wishlist"
+                >
+                  <mat-icon>favorite</mat-icon>
+                </button>
+              </mat-card-header>
+              <mat-card-subtitle>{{ watch.brand }}</mat-card-subtitle>
+              <mat-card-content (click)="goToWatchDetails(watch.id)">
+                <p>{{ watch.name }}</p>
+                <p><b>Price:</b> ₹{{ watch.price | number : "1.2-2" }}</p>
+                <p><b>Dial Color:</b> {{ watch.dialColor }}</p>
+                <p><b>Strap Material:</b> {{ watch.strapMaterial }}</p>
+              </mat-card-content>
+            </div>
+            <mat-card-actions>
+              <button (click)="addToCart(watch)">Add to Cart</button>
+              <button (click)="buynow(watch)">Buy Now</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+    <ng-template #noWatches>
+      <p>No watches match the selected filters.</p>
+    </ng-template>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<mat-paginator
+  class="custom-paginator"
+  [length]="watches.length"
+  [pageSize]="pageSize"
+  [pageSizeOptions]="pageSizeOptions"
+  (page)="onPageChange($event)"
+>
+</mat-paginator>

@@ -1,0 +1,25 @@
+<div class="watch-container" fxLayout="row" fxLayoutAlign="start">
+  <!-- Left side: Watch Image -->
+  <div class="watch-image" fxFlex="30" >
+    <img [src]="selectedWatch.imageUrl" alt="Watch Image" />
+  </div>
+
+  <!-- Right side: Watch Details -->
+  <div class="watch-details" fxFlex="50" fxLayout="column" fxLayoutGap="20px">
+    <div class="watch-info">
+      <h2>Name: {{ selectedWatch.name }}</h2>
+      <p>Brand: {{ selectedWatch.brand }}</p>
+      <p>Price: ₹ {{ selectedWatch.price }}</p>
+      <p>Dial Color: {{ selectedWatch.dialColor }}</p>
+      <p>Strap Material: {{ selectedWatch.strapMaterial }}</p>
+
+      <!-- <p>Shipping Details: Enter Pincode</p> -->
+      <!-- <p>Quantity: <input type="number" value="1" /></p>
+      <p>Discount: 10% off</p> -->
+      <div class="button-container">
+        <button (click)="addToCart(selectedWatch)">Add to Cart</button>
+        <button (click)="buynow(selectedWatch)">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>

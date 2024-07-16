@@ -1,0 +1,13 @@
+<!-- <app-header></app-header>
+    <router-outlet></router-outlet>
+<app-footer></app-footer> -->
+
+
+<ng-container *ngIf="!isLoginRoute()">
+    <app-header></app-header>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </ng-container>
+  <ng-container *ngIf="isLoginRoute()">
+    <router-outlet></router-outlet>
+  </ng-container>

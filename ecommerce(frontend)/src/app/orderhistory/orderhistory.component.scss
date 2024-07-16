@@ -1,0 +1,63 @@
+/* orderhistory.component.scss */
+
+/* Style for the entire order history container */
+.order-history-container {
+  padding: 20px;
+  // width: 50%;
+}
+
+/* Style for the heading */
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Style for the list of orders */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style for each order item */
+.order-item {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Style for the order details */
+.order-details {
+  margin-bottom: 10px;
+}
+
+/* Style for the items list */
+.items-list {
+  margin-top: 10px;
+}
+
+/* Style for each item in the items list */
+.item {
+  margin-bottom: 10px;
+}
+
+/* Style for the item image */
+.item-image {
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 10px;
+}
+
+/* Style for the item details */
+.item-details {
+  display: inline-block;
+}
+
+.noOrders {
+  font-size: 60px;
+  // color: red;
+  font-family: Didot, serif;
+  font-weight: 900;
+  text-align: center;
+  padding: 150px;
+}

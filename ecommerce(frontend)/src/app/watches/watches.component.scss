@@ -1,0 +1,111 @@
+.card {
+  margin: 5px;
+  height: 480px;
+  text-align: center;
+}
+mat-card {
+  height: 480px; ////card height
+  overflow: hidden;
+}
+
+.filter-group {
+  display: grid;
+  text-align: justify;
+}
+.filter-group h3 {
+  text-align: center;
+  font-family: Trattatello;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.watch-card img {
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-wrap: wrap;
+  object-fit: cover;
+}
+mat-drawer {
+  width: 20%;
+  // flex-shrink: 0;
+}
+.wishlist-icon{
+  margin-left: 20px;
+}
+
+.watch-card img {
+  transition: transform 0.3s ease-in-out;
+  width: 150px;
+  height: 220px;
+  margin-left: 64px;
+  padding: 6px;
+}
+
+.watch-card img:hover {
+  transform: scale(1.05);
+}
+.watch-card:hover {
+  box-shadow: 0 0 30px rgba(7, 0, 0, 0.2);
+}
+
+.custom-paginator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #f0f0f0;
+}
+
+mat-drawer-content {
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+mat-drawer-container {
+  display: flex;
+  height: 650px;
+  // overflow: visible;
+}
+
+.wishlist-active mat-icon {
+  color: red;
+}
+
+mat-card-actions button {
+  padding: 10px 20px;
+  margin-left: 30px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+mat-card-actions button:hover {
+  background-color: #0056b3;
+}
+
+mat-card-subtitle {
+  background-color: Gainsboro;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+mat-card-content p b {
+  font-weight: bold;
+}
+
+mat-card-content p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+mat-card-content {
+  padding: 16px;
+}
+
+.wishlist-added mat-icon {
+  color: red; /* Change to your desired color */
+}

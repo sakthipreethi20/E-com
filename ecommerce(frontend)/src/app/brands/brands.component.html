@@ -1,0 +1,11 @@
+<!-- brand.component.html -->
+
+<div class="brand-container">
+  <h2>Brands</h2>
+  <div class="brand-list" routerLink="/watch">
+    <div class="brand-item" *ngFor="let brand of brands">
+      <img [src]="brand.imageUrl" alt="{{ brand.name }} Logo">
+      <p>{{ brand.name }}</p>      
+    </div>
+  </div>
+</div>

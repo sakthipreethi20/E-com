@@ -1,0 +1,75 @@
+.toolbar {
+  // position: sticky;
+  // top: 0;
+  background-color: #ededec;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  display: flex;
+  align-items: center; /* Center align items vertically */
+}
+
+.toolbar header {
+  font-size: 30px;
+  font-family: cursive;
+  font-style: italic;
+  padding: 20px;
+}
+
+.toolbar a {
+  color: black;
+  text-decoration: none;
+}
+
+.toolbar button {
+  color: #333;
+  font-size: 16px;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-weight: 600;
+}
+.tabs button {
+  margin-right: 20px; /* Add margin-right to create space */
+}
+
+.toolbar button:hover {
+  background-color: #f0f0f0;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.login-button,
+.wishlist-button,
+.cart-button,
+.account-button {
+  margin-left: 20px;
+}
+
+.icon-label {
+  font-size: 12px;
+  color: #333;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-weight: 600;
+  // margin-top: -16px;
+  margin: -17px;
+}
+
+.mat-badge-content {
+  background-color: rgb(249, 111, 61);
+  color: #fff;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.user-info span {
+  margin-left: 5px;
+  font-weight: bold;
+  color: #333;
+  font-family: Trattatello;
+  font-style: italic;
+}
+

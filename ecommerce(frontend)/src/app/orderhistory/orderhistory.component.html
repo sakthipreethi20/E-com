@@ -1,0 +1,35 @@
+<!-- orderhistory.component.html -->
+
+<div class="order-history-container" *ngIf="orders.length > 0; else noOrders">
+    <h2>Your Order History</h2>
+    <div class="order-cards">
+      <mat-card class="order-card" *ngFor="let order of orders">
+        <mat-card-header>
+          <div mat-card-avatar class="order-avatar">
+            <mat-icon>receipt</mat-icon>
+          </div>
+          <mat-card-title>Order ID: {{ order.id }}</mat-card-title>
+          <mat-card-subtitle>Total Price: {{ order.totalPrice }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Shipping Address: {{ order.shippingAddress }}</p>
+          <p>Items:</p>
+          <ul class="item-list">
+            <li class="item" *ngFor="let item of order.items">
+              <img class="item-image" [src]="item.imageUrl" alt="Watch Image" />
+              <div class="item-details">
+                <p>Item Name: {{ item.name }}</p>
+                <p>Quantity: {{ item.quantity }}</p>
+                <p>Price: {{ item.price }}</p>
+              </div>
+            </li>
+          </ul>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  
+  <ng-template #noOrders>
+    <p class="noOrders">No orders available.</p>
+  </ng-template>
+  

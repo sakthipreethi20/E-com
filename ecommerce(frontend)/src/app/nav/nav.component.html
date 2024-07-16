@@ -1,0 +1,70 @@
+<mat-toolbar class="toolbar">
+  <!-- <header>
+    <a routerLink="/home">TimeTwirl</a>
+  </header> -->
+  <div class="tabs">
+    <button mat-button routerLink="/watch">Watches</button>
+    <button mat-button routerLink="/brand">Brand</button>
+    <button mat-button routerLink="/store">Store</button>
+    <button mat-button routerLink="/contact">Contact US</button>
+  </div>
+
+  <span class="spacer"></span>
+
+  <div class="user-info" *ngIf="userName">
+    <span>Welcome, {{ userName }}</span>
+  </div>
+
+  <button
+    mat-icon-button
+    class="account-button"
+    aria-label="account"
+    
+    [matMenuTriggerFor]="menu"
+  >
+    <mat-icon>account_circle</mat-icon>
+    <div class="icon-label">Account</div>
+  </button>
+
+  <mat-menu #menu="matMenu">
+    <!-- <button mat-menu-item (click)="toggleSidenav('orderHistory')">
+      Order history
+    </button> -->
+    <button  mat-menu-item routerLink="/orderhistory">  Order history</button>
+  </mat-menu>
+
+  <!-- <mat-sidenav #sidenav>
+   
+    hello
+    <button mat-icon-button class="cancel-button" aria-label="cancel" (click)="toggleSidenav('')">
+      <mat-icon>cancel</mat-icon>
+    </button>
+    <app-orderhistory></app-orderhistory>
+  </mat-sidenav> -->
+
+  <!-- <button mat-button (click)="logOut()">
+    <mat-icon>exit_to_app</mat-icon>
+    Logout
+  </button> -->
+
+  <button
+    mat-icon-button
+    class="wishlist-button"
+    aria-label="Wishlist"
+    routerLink="/wishlist"
+  >
+    <mat-icon>favorite</mat-icon>
+    <div class="icon-label">Wishlist</div>
+  </button>
+
+  <button
+    mat-icon-button
+    class="cart-button"
+    aria-label="Cart"
+    [routerLink]="'/cart'"
+  >
+    <mat-icon>shopping_cart</mat-icon>
+    <mat-badge [matBadge]="cartCounter$ | async"></mat-badge>
+    <div class="icon-label">Cart</div>
+  </button>
+</mat-toolbar>

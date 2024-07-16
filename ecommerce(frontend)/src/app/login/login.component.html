@@ -1,0 +1,99 @@
+<div class="login-container">
+  <div class="form-container">
+    <div *ngIf="!showLogin" class="login">
+      <form
+        #loginform="ngForm"
+        class="login-form"
+        (ngSubmit)="onLogin(loginform.value )"
+      >
+        <mat-form-field appearance="outline">
+          <mat-label>Username</mat-label>
+          <input
+            matInput
+            type="text"
+            placeholder="Enter your username"
+            ngModel
+            name="username"
+            required
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Enter your password</mat-label>
+          <input
+            matInput
+            [type]="hide ? 'password' : 'text'"
+            placeholder="Enter your password"
+            ngModel
+            name="password"
+            required
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="hide = !hide"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide"
+          >
+            <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <button mat-raised-button class="login-button" type="submit">Login</button>
+
+        <a class="login" (click)="signup()">Don't have an account ? SignUp</a>
+      </form>
+    </div>
+
+    <div *ngIf="showLogin" class="signup">
+      <h1>SignUp</h1>
+      <!-- <p>{{loginerror}}</p> -->
+
+      <form
+        #loginform="ngForm"
+        class="loginform"
+        (submit)="onSignin(loginform.value)"
+      >
+        <mat-form-field appearance="outline">
+          <mat-label>username</mat-label>
+          <input
+            class="form-username"
+            matInput
+            type="username"
+            placeholder="Enter your username"
+            ngModel
+            name="username"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input
+            class="form-email"
+            matInput
+            type="emailid"
+            placeholder="Enter your email"
+            ngModel
+            name="emailid"
+          />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            type="password"
+            placeholder="Enter your password"
+            ngModel
+            name="password"
+          />
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">SignUp</button>
+        <br />
+        <a class="toggle" (click)="openSignup()"
+          >Already have an account? login</a
+        >
+      </form>
+    </div>
+  </div>
+</div>
